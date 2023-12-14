@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Background from './components/Background.jsx';
 import Header from './components/Header'
 import Input from './components/Input'
 import Output from './components/Output'
@@ -27,11 +28,10 @@ function App() {
 
   return (
     <>
+    <Background />
     <Header />
     <div id="boxes">
-      <video id="background-video" autoplay loop muted>
-        <source src="./src/assets/backgroundvideo.mp4" type="video/mp4" />
-      </video>
+
       <Input h2={"PlainText"} handleClick={encode} />
       
       <Output h2={"CipherText"} info={eInfo}/>
