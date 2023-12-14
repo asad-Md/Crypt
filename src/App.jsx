@@ -29,6 +29,9 @@ function App() {
     <>
     <Header />
     <div id="boxes">
+      <video id="background-video" autoplay loop muted>
+        <source src="./src/assets/backgroundvideo.mp4" type="video/mp4" />
+      </video>
       <Input h2={"PlainText"} handleClick={encode} />
       
       <Output h2={"CipherText"} info={eInfo}/>
