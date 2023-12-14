@@ -52,7 +52,7 @@ export function dKey(text,key){
         while (oldJ < 0) {
             oldJ += chars.length;
         }
-
+        
         PlainText += chars[oldJ];  //get encrypted character from the array CHARS
     }
     // console.log(plainText,key)

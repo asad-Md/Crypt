@@ -5,7 +5,7 @@ import Output from './components/Output'
 import {eKey, dKey} from './util.js';
 
 function App() {
-  const [eInfo, seteInfo] = useState({'PlainText':'','CipherText':'',key:0})
+  const [eInfo, seteInfo] = useState({'PlainText':'','CipherText':'',key:undefined})
   console.log(eInfo);
   function encode(text) {
     seteInfo(prevInfo=> {

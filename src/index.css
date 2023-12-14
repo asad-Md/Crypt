@@ -83,6 +83,8 @@ h2{
 }
 .workButton:active{
   transform: scale(0.95);
+  content: "Copied";
+  color: #0C134F;
 }
 
 *::placeholder {
@@ -94,7 +96,8 @@ h2{
 #keyInput{
   border: none;
   text-align: center;
-  width: 50%;
+  width: 5em;
+  padding: 8px;
   border-radius: 3px;
   color: 	#7d9cb7;
   background-color: darkslateblue;
@@ -104,4 +107,14 @@ h2{
   background-color: darkslateblue;
   transform: scale(1.02);
   color: #83DB49;
+}
+#keyInput::placeholder{
+  font-size: .9em;
+  
+}
+
+.btns{
+  display: flex;
+  justify-content: space-evenly;
+  /* width: 100%; */
 }

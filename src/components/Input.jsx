@@ -2,7 +2,9 @@ import { useState } from "react"
 
 export default function Input({handleClick, h2 }){
     const [text,setText] = useState("")
+
     var buttonValue; var keyField; var key;
+
     function handleChange(event){
         setText(prevText =>{
             prevText=event.target.value
@@ -13,10 +15,10 @@ export default function Input({handleClick, h2 }){
     
     if(h2==="CipherText"){
         function handleKey(event){
-            // key= ()=>{prevKey => prevKey= event.target.value; return prevKey}
             key=event.target.value;
         }
-        keyField=<input type="number" id="keyInput"
+
+        keyField=<input type="number" id="keyInput" className="workButton"
                                  placeholder="Enter key" required
                                  onChange={handleKey} />
     }
@@ -31,10 +33,13 @@ export default function Input({handleClick, h2 }){
                     required value={text} onChange={(event)=>{handleChange(event)}}/>
             
             <br/>
-            {keyField}
-            <button id="encode" className="workButton" 
-                    onClick={()=>handleClick(text,key)} > {buttonValue} 
-            </button>
+            <div className="btns" >
+                {keyField}
+                <button id="encode" className="workButton" 
+                        onClick={()=>handleClick(text,key)} > {buttonValue} 
+                </button>
+            </div>
+            
             
             
         </div>
