@@ -3,6 +3,6 @@ export default function Background(){
     <video id="background-video" autoplay loop muted>
         <source src="./src/assets/backgroundvideo.mp4" type="video/mp4" />
     </video>
-    <img id="backgroundImg" src="../assets/background.jpg" />
+    <img id="backgroundImg" src="../assets/background.png" />
     </>)
 }
