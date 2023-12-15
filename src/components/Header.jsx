@@ -1,9 +1,9 @@
-import headerImg from "../assets/headerImg.jpg"
-export default function Header() {
+
+export default function Header({ title, headerImg }) {
     return (
         
         <div id="Header">
-            <h1>Encryptor</h1>
+            <h2>{title}</h2>
             <img src={headerImg} alt="to be added" />
         </div>
         

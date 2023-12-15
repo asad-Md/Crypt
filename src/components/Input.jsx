@@ -1,9 +1,11 @@
 import { useState } from "react"
+import btnImgE from '../assets/encrLock6s.png'
+import btnImgD from '../assets/decrLock6s.png'
 
 export default function Input({handleClick, h2 }){
     const [text,setText] = useState("")
 
-    var buttonValue; var keyField; var key;
+    var buttonValue; var keyField; var key; var btnImg;
 
     function handleChange(event){
         setText(prevText =>{
@@ -11,9 +13,12 @@ export default function Input({handleClick, h2 }){
             return prevText
         })
     }
-    if(h2==='PlainText'){buttonValue="Encode"}else if(h2==='CipherText'){buttonValue="Decode"}
+    if(h2==='PlainText'){
+        btnImg=btnImgE
+        buttonValue="Encode"}else if(h2==='CipherText'){buttonValue="Decode"}
     
     if(h2==="CipherText"){
+        btnImg=btnImgD
         function handleKey(event){
             key=event.target.value;
         }
@@ -36,8 +41,10 @@ export default function Input({handleClick, h2 }){
             <div className="btns" >
                 {keyField}
                 <button id="encode" className="workButton" 
-                        onClick={()=>handleClick(text,key)} > {buttonValue} 
+                        onClick={()=>handleClick(text,key)} > {buttonValue}
+                        <img className="workBtnImg" src={btnImg} alt="Lock Image" />
                 </button>
+                
             </div>
             
             
