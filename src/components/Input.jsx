@@ -1,6 +1,6 @@
 import { useState } from "react"
-import btnImgE from '../assets/encrLock6s.png'
-import btnImgD from '../assets/decrLock6s.png'
+import btnImgE from '../assets/encrLock6sbw.png'
+import btnImgD from '../assets/decrLock6sbw.png'
 
 export default function Input({handleClick, h2 }){
     const [text,setText] = useState("")
