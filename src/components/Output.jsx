@@ -1,7 +1,6 @@
-export default function Output({ info,h2 }) {
+export default function Output({ info , h2 }) {
     var value;var keyField;var key;
-    const copied='Copied!';
-
+    
     if(h2==='CipherText'){value=info.CipherText;
     }else if(h2==='PlainText'){value=info.PlainText;}  
 
@@ -19,10 +18,8 @@ export default function Output({ info,h2 }) {
             // .then(() => alert('Text copied to clipboard'))
             .catch(err => console.error('Could not copy text: ', err));
         key=(prevKey=>{prevKey="Copied!";return prevKey});
-        setTimeout(() => {
-            key=(prevKey=>{prevKey=info.key;return prevKey});
-          }, 2000);
     }
+
     if(h2==="CipherText"){
         key=info.key;
         keyField=<button placeholder="" className="workButton" id="copy" 

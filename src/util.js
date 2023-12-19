@@ -39,6 +39,7 @@ export function eKey(text){
 // }
 
 export function dKey(text,key){
+    // console.log("in dkey " + typeof(key) + key)
     const text1=[...text]
     // console.log(text1)
     var oldJ; var char;var j;
@@ -56,7 +57,7 @@ export function dKey(text,key){
         PlainText += chars[oldJ];  //get encrypted character from the array CHARS
     }
     // console.log(plainText,key)
-    return {PlainText,key}
+    return {PlainText}
 }
 
 // const key=Math.floor(Math.random()*chars.length)
