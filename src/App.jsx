@@ -15,30 +15,25 @@ function App() {
   const handleScroll = (ref) => {
       ref.current?.scrollIntoView({behavior: 'smooth'});
     };
+  const [eInfo, seteInfo] = useState(
+    {'PlainText':'','CipherText':'', key:undefined , keyDecr:undefined })
 
-  const [eInfo, seteInfo] = useState({'PlainText':'','CipherText':'', key:undefined , keyDecr:undefined })
-  // console.log(eInfo);
   function encode(text) {
     seteInfo(prevInfo=> {
       const newInfo= {...prevInfo,
         ...eKey(text)}
-      // prevInfo=eKey(text)
       return newInfo
-      // prevText = text;
-      // console.log(prevText);
-      // return prevText 
-    })  
-         
+    })        
   }
+
   function handleKeyChange(event){
     seteInfo(prevInfo=> {
       const newInfo = {...prevInfo,
         keyDecr:event.target.value}
       return newInfo
     }) 
-    // info.keyDecr= parseInt(event.target.value)
-    // console.log(typeof(info.keyDecr));
  }
+
   function decode(text) {
     const key = eInfo.keyDecr
     seteInfo(prevInfo=> {
@@ -47,13 +42,10 @@ function App() {
       return newInfo
     })
   }
+  let page=1;let pageContent;
 
-
-  return (
-    <>
-    <Background />
-    <Navbar handleClick={handleScroll} ref1={ref1} ref2={ref2} />
-    
+  if(page === 1) {pageContent=
+    <>    
     {/* <Header title="Encrypt" headerImg={headerImgE}/> */}
     <div ref={ref1} id="encrContainer" className="boxes">
 
@@ -70,6 +62,14 @@ function App() {
       <Header title="Decrypt" headerImg={headerImgD} />
       <Output h2={"PlainText"} info={eInfo}/>
     </div>
+    </>
+  }
+
+  return (
+    <>
+    <Background />
+    <Navbar handleClick={handleScroll} ref1={ref1} ref2={ref2} />
+    {pageContent}
 
     </>
   )
