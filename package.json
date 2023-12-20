@@ -2,7 +2,7 @@
   "name": "encoder",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://n0uchan.github.io/Encoder/",
+  "homepage": "https://n0uchan.github.io/Crypt/",
   "type": "module",
   "scripts": {
     "dev": "vite",
