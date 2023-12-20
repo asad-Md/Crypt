@@ -53,7 +53,7 @@ function App() {
     }
     pageContent=
     <>   
-    <div id="pageNameU"><div id="pageNameV"><Header className="pageName" title="Simple Mode" /></div></div>
+    {/* <div id="pageNameU"><div id="pageNameV"><Header className="pageName" title="Simple Mode" /></div></div> */}
     
     <div ref={ref1} id="encrContainer" className="boxes">
 
@@ -90,10 +90,12 @@ function App() {
     }
     pageContent=
     <>
-      <div id="pageNameU"><div id="pageNameV"><Header className="pageName" title="Crazy Mode" /></div></div>
+      {/* <div id="pageNameU"><div id="pageNameV"><Header className="pageName" title="Crazy Mode" /></div></div> */}
       <div ref={ref1} id="encrContainer" className="boxes">
         <Input h2={"PlainText"} handleClick={encode} />
-        <Header title="Encrypt" />
+        
+        <Header title="E̶͍̘͌̈̐͂n̴̢̧̤̻͎̬͎̦̉͆̃͑̆͂͝ć̷̬̗̥͔͓̤͕̤ȑ̶̢͔̼̪̇͋̈́̌̕y̸̛͍̰͇̰̞̏͊̏̂͛̆̚p̵̟͎̜̟̲̏̊͊́̆̈́͆̈̉̇t̸̗̠̫̟͙̽̋̓̃͒͘͜͠"  />
+        
         <Output h2={"CipherText"} info={eInfo}/>
       </div>
 
@@ -101,7 +103,9 @@ function App() {
         <Input h2={"CipherText"} info={ eInfo }
           handleClick={decode}
           handleKey={ handleKeyChange } />
-        <Header title="Decrypt"  />
+        
+        <Header title="Ḑ̵͍̼͇͙̰̬̐ͅȩ̴̖̭̀̃́c̷̗̤̲̹̖̏̽͛͂́ř̴̨͙̼͓͈͉ỳ̴͇̮̪͒͛͝p̷̳̞̟̻̲̖̝͔͊̑t̵͉̏̏̔̓͛͘͜"  />
+        
         <Output h2={"PlainText"} info={eInfo}/>
       </div>
       </>
